@@ -443,8 +443,8 @@ def page_home(data: dict, df: pd.DataFrame):
                         help=f"Click to view {m['name']} ward details"
                     ):
                         # Set session state to switch to municipality page
-                        st.session_state.nav = "🏛️ Municipality-wise"
-                        st.session_state.selected_municipality = m['name']
+                        st.session_state["nav"] = "🏛️ Municipality-wise"
+                        st.session_state["selected_municipality"] = m['name']
                         st.rerun()
     
     # Also show traditional table for reference
@@ -479,8 +479,10 @@ def page_municipality(data: dict, df: pd.DataFrame):
     default_idx = 0
     if "selected_municipality" in st.session_state:
         try:
-            default_idx = muni_names.index(st.session_state.selected_municipality)
-        except ValueError:
+            default_idx = muni_names.index(st.session_state["selected_municipality"])
+            # Clear the selection after using it
+            del st.session_state["selected_municipality"]
+        except (ValueError, KeyError):
             pass
     
     selected = st.selectbox(
