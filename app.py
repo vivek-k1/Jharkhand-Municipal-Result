@@ -321,7 +321,7 @@ def page_home(data: dict, df: pd.DataFrame):
         <p>Jharkhand Urban Local Body (Municipal) Election Results</p>
     </div>""", unsafe_allow_html=True)
 
-    # Summary cards with click functionality
+    # Summary cards
     cols = st.columns(4)
     cards = [
         ("Total ULBs", summary["total_ulbs"], SAFFRON),
@@ -329,41 +329,8 @@ def page_home(data: dict, df: pd.DataFrame):
         ("Results Declared", f"{len(df[df['Status']=='Declared'])}/{len(df)}", GREEN),
         ("Avg. Turnout", f"{df['Turnout %'].mean():.1f}%", "#19AAED"),
     ]
-    
-    # Create clickable metric cards
-    clicked_cards = []
-    for i, (col, (label, val, clr)) in enumerate(zip(cols, cards)):
-        with col:
-            # Use streamlit-click-detector approach with HTML + JavaScript
-            card_html = f"""
-            <div class="clickable-metric-card" 
-                 onclick="window.parent.postMessage({{type: 'streamlit:setComponentValue', value: '{i}'}}, '*')"
-                 style="cursor: pointer;">
-                <div class="metric-card">
-                    <div class="metric-value" style="color:{clr}">{val}</div>
-                    <div class="metric-label">{label}</div>
-                </div>
-            </div>
-            <script>
-            document.querySelectorAll('.clickable-metric-card').forEach((card, index) => {{
-                card.addEventListener('click', () => {{
-                    // Trigger Streamlit rerun by setting session state
-                    window.parent.postMessage({{
-                        type: 'streamlit:setComponentValue',
-                        value: index
-                    }}, '*');
-                }});
-            }});
-            </script>
-            """
-            
-            # For now, let's use a simpler approach - just show the cards and add click buttons below
-            st.markdown(metric_card(label, val, clr), unsafe_allow_html=True)
-            
-            # Add a small click area
-            if st.button("📊 View Details", key=f"card_{i}", help="Click to view municipality details"):
-                st.session_state.nav = "🏛️ Municipality-wise"
-                st.rerun()
+    for col, (label, val, clr) in zip(cols, cards):
+        col.markdown(metric_card(label, val, clr), unsafe_allow_html=True)
 
     st.markdown("<br>", unsafe_allow_html=True)
 
