@@ -199,6 +199,30 @@ def inject_css(dark_mode: bool):
             outline: 3px solid {SAFFRON};
             outline-offset: 2px;
         }}
+        /* ---------- Enhanced button styling ---------- */
+        .stButton > button {{
+            background: {card_bg};
+            border: 1px solid {border_color};
+            border-radius: 8px;
+            padding: 0.75rem;
+            transition: all 0.2s ease;
+            color: {text_color};
+            font-weight: 500;
+        }}
+        .stButton > button:hover {{
+            background: {SAFFRON};
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(255,153,51,0.3);
+            border-color: {SAFFRON};
+        }}
+        /* ---------- Municipality card buttons ---------- */
+        div[data-testid="column"] .stButton > button {{
+            height: auto;
+            white-space: pre-wrap;
+            text-align: left;
+            min-height: 80px;
+        }}
         /* Ward table tweaks */
         .ward-table {{ width: 100%; border-collapse: collapse; }}
         .ward-table th {{
@@ -310,10 +334,17 @@ def page_home(data: dict, df: pd.DataFrame):
 
     st.markdown("<br>", unsafe_allow_html=True)
 
-    # Refresh indicator
+    # Refresh indicator with data timestamp
     auto_on = st.session_state.get("auto_refresh", True)
     dot = '<span class="refresh-dot"></span>' if auto_on else ""
-    ts = datetime.now().strftime("%d %b %Y, %I:%M:%S %p")
+    
+    # Parse the data timestamp and format it properly
+    try:
+        data_time = datetime.fromisoformat(data["last_updated"].replace("T", " "))
+        ts = data_time.strftime("%d %b %Y, %H:%M")
+    except:
+        ts = datetime.now().strftime("%d %b %Y, %H:%M")
+    
     st.markdown(
         f"{dot}**Last updated:** {ts} &nbsp;|&nbsp; Auto-refresh: "
         f"{'🟢 ON' if auto_on else '🔴 OFF'}",
@@ -372,21 +403,61 @@ def page_home(data: dict, df: pd.DataFrame):
 
     st.divider()
 
-    # Municipality summary table
+    # Municipality summary with clickable cards
     st.subheader("Municipality-wise Summary")
+    st.markdown("*Click on any municipality below to view detailed ward results*")
+    
     muni_summary = []
     for m in data["municipalities"]:
         wards = m.get("wards", [])
         dec = sum(1 for w in wards if w["status"] == "Declared")
         muni_summary.append({
-            "Municipality": m["name"],
-            "Type": m.get("type", ""),
-            "Total Wards": m["total_wards"],
-            "Declared": dec,
-            "Progress": f"{dec}/{m['total_wards']}",
-            "% Complete": round(dec / m["total_wards"] * 100, 1) if m["total_wards"] else 0,
+            "name": m["name"],
+            "type": m.get("type", ""),
+            "total_wards": m["total_wards"],
+            "declared": dec,
+            "progress": f"{dec}/{m['total_wards']}",
+            "pct_complete": round(dec / m["total_wards"] * 100, 1) if m["total_wards"] else 0,
         })
-    mdf = pd.DataFrame(muni_summary)
+    
+    # Create clickable municipality cards in a grid
+    cols_per_row = 3
+    for i in range(0, len(muni_summary), cols_per_row):
+        cols = st.columns(cols_per_row)
+        for j, col in enumerate(cols):
+            if i + j < len(muni_summary):
+                m = muni_summary[i + j]
+                with col:
+                    # Create clickable card using button
+                    status_color = "🟢" if m["pct_complete"] == 100 else "🟡" if m["pct_complete"] > 50 else "🔴"
+                    card_text = f"""
+                    **{m['name']}**  
+                    {m['type']}  
+                    {status_color} {m['progress']} wards ({m['pct_complete']}%)
+                    """
+                    
+                    if st.button(
+                        card_text,
+                        key=f"muni_btn_{i+j}",
+                        use_container_width=True,
+                        help=f"Click to view {m['name']} ward details"
+                    ):
+                        # Set session state to switch to municipality page
+                        st.session_state.nav = "🏛️ Municipality-wise"
+                        st.session_state.selected_municipality = m['name']
+                        st.rerun()
+    
+    # Also show traditional table for reference
+    st.markdown("---")
+    mdf = pd.DataFrame([{
+        "Municipality": m["name"],
+        "Type": m["type"],
+        "Total Wards": m["total_wards"],
+        "Declared": m["declared"],
+        "Progress": m["progress"],
+        "% Complete": m["pct_complete"],
+    } for m in muni_summary])
+    
     st.dataframe(
         mdf.style.background_gradient(subset=["% Complete"], cmap="YlGn"),
         use_container_width=True,
@@ -403,7 +474,21 @@ def page_municipality(data: dict, df: pd.DataFrame):
     </div>""", unsafe_allow_html=True)
 
     muni_names = [m["name"] for m in data["municipalities"]]
-    selected = st.selectbox("Select Municipality", muni_names, key="muni_select")
+    
+    # Check if municipality was selected from home page
+    default_idx = 0
+    if "selected_municipality" in st.session_state:
+        try:
+            default_idx = muni_names.index(st.session_state.selected_municipality)
+        except ValueError:
+            pass
+    
+    selected = st.selectbox(
+        "Select Municipality", 
+        muni_names, 
+        index=default_idx,
+        key="muni_select"
+    )
 
     muni_data = next(m for m in data["municipalities"] if m["name"] == selected)
     mdf = df[df["Municipality"] == selected].copy()
@@ -682,36 +767,80 @@ def page_analytics(data: dict, df: pd.DataFrame):
 # ---------------------------------------------------------------------------
 def render_sidebar():
     with st.sidebar:
-        logo_path = Path(__file__).parent / "jharkhand_map.png"
-        if logo_path.exists():
-            st.image(str(logo_path), width=120)
-        else:
-            st.image(
-                "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/"
-                "Emblem_of_India.svg/200px-Emblem_of_India.svg.png",
-                width=80,
-            )
-        st.markdown("### Jharkhand State Election Commission")
-        st.markdown("**Nikay Chunav 2026**")
+        # Header with logo and title
+        col1, col2 = st.columns([1, 2])
+        with col1:
+            logo_path = Path(__file__).parent / "jharkhand_map.png"
+            if logo_path.exists():
+                st.image(str(logo_path), width=60)
+            else:
+                st.image(
+                    "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/"
+                    "Emblem_of_India.svg/200px-Emblem_of_India.svg.png",
+                    width=60,
+                )
+        with col2:
+            st.markdown("""
+            <div style='padding-top: 8px;'>
+                <h4 style='margin: 0; color: #FF9933;'>JSEC</h4>
+                <p style='margin: 0; font-size: 0.8rem; color: #666;'>Nikay Chunav 2026</p>
+            </div>
+            """, unsafe_allow_html=True)
+        
         st.divider()
 
+        # Navigation with enhanced styling
+        st.markdown("### 📍 Navigation")
         page = st.radio(
-            "Navigation",
+            "",
             ["🏠 Dashboard Home", "🏛️ Municipality-wise", "📈 State Analytics"],
             key="nav",
         )
 
         st.divider()
 
-        dark_mode = st.toggle("🌙 Dark Mode", value=False, key="dark_mode")
-
-        auto = st.toggle("🔄 Auto-refresh (15s)", value=True, key="auto_refresh")
+        # Quick stats in sidebar
+        st.markdown("### 📊 Quick Stats")
+        data = load_data()
+        total_munis = len(data["municipalities"])
+        total_wards = sum(len(m.get("wards", [])) for m in data["municipalities"])
+        declared_wards = sum(1 for m in data["municipalities"] for w in m.get("wards", []) if w["status"] == "Declared")
+        
+        col1, col2 = st.columns(2)
+        with col1:
+            st.metric("ULBs", total_munis, delta=None)
+            st.metric("Declared", declared_wards, delta=None)
+        with col2:
+            st.metric("Total Wards", total_wards, delta=None)
+            st.metric("Progress", f"{round(declared_wards/total_wards*100, 1)}%", delta=None)
 
         st.divider()
-        st.caption("Data refreshes automatically every 15 seconds when enabled.")
-        st.caption(
-            "Source: Jharkhand State Election Commission (sample data for demonstration)"
-        )
+
+        # Settings
+        st.markdown("### ⚙️ Settings")
+        dark_mode = st.toggle("🌙 Dark Mode", value=False, key="dark_mode")
+        auto = st.toggle("🔄 Auto-refresh (15s)", value=True, key="auto_refresh")
+
+        # Live status indicator
+        if auto:
+            st.markdown("""
+            <div style='text-align: center; padding: 10px; background: #d4edda; border-radius: 5px; margin: 10px 0;'>
+                <span style='color: #155724; font-size: 0.8rem;'>
+                    🟢 LIVE - Auto-updating every 15s
+                </span>
+            </div>
+            """, unsafe_allow_html=True)
+
+        st.divider()
+        
+        # Footer
+        st.markdown("""
+        <div style='font-size: 0.7rem; color: #666; text-align: center;'>
+            <p>Data refreshes automatically when enabled.</p>
+            <p><strong>Source:</strong> Jharkhand State Election Commission</p>
+            <p style='color: #FF9933;'><em>Sample data for demonstration</em></p>
+        </div>
+        """, unsafe_allow_html=True)
 
     return page, dark_mode, auto
 
