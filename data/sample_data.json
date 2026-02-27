@@ -1,10 +1,10 @@
 {
   "election_name": "Jharkhand Urban Local Body Elections 2026",
-  "last_updated": "2026-02-27T13:00:00",
+  "last_updated": "2026-02-27T08:30:00",
   "summary": {
-    "total_ulbs": 19,
-    "total_wards": 378,
-    "declared": 155,
+    "total_ulbs": 22,
+    "total_wards": 484,
+    "declared": 163,
     "turnout": 64.8
   },
   "parties": [
@@ -841,18 +841,83 @@
     {
       "name": "Dhanbad Municipal Corporation",
       "type": "Municipal Corporation",
-      "total_wards": 45,
-      "declared": 0,
+      "total_wards": 51,
+      "declared": 3,
       "mayor_race": {
         "status": "Counting",
-        "leading": "Sanjeev Agarwal",
+        "leading": "Sanjeev Singh",
         "leading_party": "IND",
-        "margin": 0,
+        "margin": 2700,
         "trailing": "Chandrashekhar Agarwal",
         "trailing_party": "IND",
-        "note": "Three-way contest: Sanjeev Agarwal (BJP-backed), Chandrashekhar Agarwal (JMM-backed), Shamsher Alam (INC-backed). Turnout: 46.98%"
+        "note": "Former MLA Sanjeev Singh leading by 2700 votes. Three-way contest with Chandrashekhar Agarwal (JMM-backed) and Shamsher Alam (INC-backed). Turnout: 46.98%"
       },
-      "wards": []
+      "wards": [
+        {"ward_no": 21, "ward_name": "Ward 21", "status": "Counting", "winner": "", "winner_party": "", "winner_votes": 0, "vote_pct": 0, "margin": 0, "turnout": 47.0, "evm_processed": 65, "votes_counted_pct": 65, "category": "General", "gender": "Female",
+          "candidates": [
+            {"name": "Urmila Mandal", "party": "IND", "votes": 890, "pct": 48.2, "prev_votes": 780},
+            {"name": "Andila Devi", "party": "IND", "votes": 190, "pct": 10.3, "prev_votes": 650},
+            {"name": "Rajesh Kumar", "party": "IND", "votes": 767, "pct": 41.5, "prev_votes": 700}
+          ]},
+        {"ward_no": 26, "ward_name": "Ward 26", "status": "Declared", "winner": "Vikas Ranjan", "winner_party": "IND", "winner_votes": 856, "vote_pct": 47.5, "margin": 400, "turnout": 47.0, "evm_processed": 100, "votes_counted_pct": 100, "category": "General", "gender": "Male",
+          "candidates": [
+            {"name": "Vikas Ranjan", "party": "IND", "votes": 856, "pct": 47.5, "prev_votes": 750},
+            {"name": "Nirmal Mukherjee", "party": "IND", "votes": 456, "pct": 25.3, "prev_votes": 800},
+            {"name": "Sanjay Prasad", "party": "IND", "votes": 489, "pct": 27.2, "prev_votes": 420}
+          ]},
+        {"ward_no": 51, "ward_name": "Ward 51", "status": "Declared", "winner": "Birendra Kumar", "winner_party": "IND", "winner_votes": 734, "vote_pct": 46.8, "margin": 156, "turnout": 47.0, "evm_processed": 100, "votes_counted_pct": 100, "category": "General", "gender": "Male",
+          "candidates": [
+            {"name": "Birendra Kumar", "party": "IND", "votes": 734, "pct": 46.8, "prev_votes": 650},
+            {"name": "Suresh Yadav", "party": "IND", "votes": 578, "pct": 36.9, "prev_votes": 540},
+            {"name": "Md Karim", "party": "IND", "votes": 256, "pct": 16.3, "prev_votes": 220}
+          ]}
+      ]
+    },
+    {
+      "name": "Chirkunda Nagar Parishad",
+      "type": "Nagar Parishad",
+      "total_wards": 15,
+      "declared": 2,
+      "wards": [
+        {"ward_no": 2, "ward_name": "Ward 2", "status": "Declared", "winner": "Bharti Kumari", "winner_party": "IND", "winner_votes": 512, "vote_pct": 46.5, "margin": 112, "turnout": 64.8, "evm_processed": 100, "votes_counted_pct": 100, "category": "General", "gender": "Female",
+          "candidates": [
+            {"name": "Bharti Kumari", "party": "IND", "votes": 512, "pct": 46.5, "prev_votes": 450},
+            {"name": "Rajesh Singh", "party": "IND", "votes": 400, "pct": 36.3, "prev_votes": 380},
+            {"name": "Sunita Devi", "party": "IND", "votes": 189, "pct": 17.2, "prev_votes": 160}
+          ]},
+        {"ward_no": 12, "ward_name": "Ward 12", "status": "Declared", "winner": "Bulti Devi", "winner_party": "IND", "winner_votes": 534, "vote_pct": 47.8, "margin": 134, "turnout": 65.5, "evm_processed": 100, "votes_counted_pct": 100, "category": "General", "gender": "Female",
+          "candidates": [
+            {"name": "Bulti Devi", "party": "IND", "votes": 534, "pct": 47.8, "prev_votes": 470},
+            {"name": "Manoj Kumar", "party": "IND", "votes": 400, "pct": 35.8, "prev_votes": 380},
+            {"name": "Kavita Singh", "party": "IND", "votes": 183, "pct": 16.4, "prev_votes": 150}
+          ]}
+      ]
+    },
+    {
+      "name": "Jamshedpur Municipal Corporation",
+      "type": "Municipal Corporation",
+      "total_wards": 45,
+      "declared": 3,
+      "wards": [
+        {"ward_no": 4, "ward_name": "Ward 4", "status": "Declared", "winner": "Mamta Chatterjee", "winner_party": "IND", "winner_votes": 623, "vote_pct": 44.2, "margin": 45, "turnout": 66.3, "evm_processed": 100, "votes_counted_pct": 100, "category": "General", "gender": "Female",
+          "candidates": [
+            {"name": "Mamta Chatterjee", "party": "IND", "votes": 623, "pct": 44.2, "prev_votes": 550},
+            {"name": "Sunita Mahato", "party": "IND", "votes": 578, "pct": 41.0, "prev_votes": 530},
+            {"name": "Rajesh Das", "party": "IND", "votes": 208, "pct": 14.8, "prev_votes": 180}
+          ]},
+        {"ward_no": 6, "ward_name": "Ward 6", "status": "Declared", "winner": "Ravindra Singh Sisodia", "winner_party": "IND", "winner_votes": 430, "vote_pct": 46.5, "margin": 223, "turnout": 65.8, "evm_processed": 100, "votes_counted_pct": 100, "category": "General", "gender": "Male",
+          "candidates": [
+            {"name": "Ravindra Singh Sisodia", "party": "IND", "votes": 430, "pct": 46.5, "prev_votes": 380},
+            {"name": "Sanjay Kumar", "party": "IND", "votes": 207, "pct": 22.4, "prev_votes": 250},
+            {"name": "Md Firoz", "party": "IND", "votes": 288, "pct": 31.1, "prev_votes": 300}
+          ]},
+        {"ward_no": 9, "ward_name": "Ward 9", "status": "Declared", "winner": "Rajesh Singh", "winner_party": "IND", "winner_votes": 567, "vote_pct": 45.8, "margin": 134, "turnout": 67.2, "evm_processed": 100, "votes_counted_pct": 100, "category": "General", "gender": "Male",
+          "candidates": [
+            {"name": "Rajesh Singh", "party": "IND", "votes": 567, "pct": 45.8, "prev_votes": 500},
+            {"name": "Dilip Mahato", "party": "IND", "votes": 433, "pct": 35.0, "prev_votes": 410},
+            {"name": "Babita Kumari", "party": "IND", "votes": 238, "pct": 19.2, "prev_votes": 210}
+          ]}
+      ]
     },
     {
       "name": "Bokaro Chas Municipal Corporation",
