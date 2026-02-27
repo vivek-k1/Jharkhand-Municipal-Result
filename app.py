@@ -34,15 +34,35 @@ st.set_page_config(
     page_icon="🗳️",
     layout="wide",
     initial_sidebar_state="expanded",
+    menu_items={
+        'About': "Jharkhand Municipal Election Results 2026 Dashboard"
+    }
 )
 
 # ---------------------------------------------------------------------------
-# Google AdSense verification meta tag
+# Google AdSense verification - inject into head using components
 # ---------------------------------------------------------------------------
-ADSENSE_META = """
-<meta name="google-adsense-account" content="ca-pub-9674118663923293">
-"""
-st.markdown(ADSENSE_META, unsafe_allow_html=True)
+def inject_adsense_meta():
+    """Inject AdSense meta tag into page head"""
+    components.html("""
+    <script>
+        // Try to inject meta tag into document head
+        if (typeof window !== 'undefined' && window.parent && window.parent.document) {
+            var meta = window.parent.document.createElement('meta');
+            meta.name = 'google-adsense-account';
+            meta.content = 'ca-pub-9674118663923293';
+            
+            // Check if meta tag already exists
+            var existing = window.parent.document.querySelector('meta[name="google-adsense-account"]');
+            if (!existing) {
+                window.parent.document.head.appendChild(meta);
+            }
+        }
+    </script>
+    """, height=0)
+
+# Call the function to inject meta tag
+inject_adsense_meta()
 
 # ---------------------------------------------------------------------------
 # Theme colours (Jharkhand: saffron, green, blue)
