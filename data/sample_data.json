@@ -1,6 +1,6 @@
 {
   "election_name": "Jharkhand Urban Local Body Elections 2026",
-  "last_updated": "2026-02-27T16:50:00",
+  "last_updated": "2026-02-27T17:15:00",
   "summary": {
     "total_ulbs": 48,
     "total_wards": 484,
@@ -950,7 +950,7 @@
       "name": "Dhanbad Municipal Corporation",
       "type": "Municipal Corporation",
       "total_wards": 55,
-      "declared": 3,
+      "declared": 7,
       "mayor_race": {
         "status": "Counting",
         "leading": "Sanjeev Singh",
@@ -958,7 +958,7 @@
         "margin": 2700,
         "trailing": "Chandrashekhar Agarwal",
         "trailing_party": "IND",
-        "note": "Former MLA Sanjeev Singh leading by 2700 votes. Three-way contest with Chandrashekhar Agarwal (JMM-backed) and Shamsher Alam (INC-backed). Turnout: 46.98%"
+        "note": "Sanjeev Singh (husband of BJP MLA Ragini Singh) leading. JMM-backed Shekar Agarwal second, BJP's Sanjeev Agarwal third, Indu Singh (Sanjeev's aunt) fourth."
       },
       "wards": [
         {"ward_no": 1, "ward_name": "Ward 1", "status": "Counting", "winner": "", "winner_party": "", "winner_votes": 0, "vote_pct": 0, "margin": 0, "turnout": 47.0, "evm_processed": 70, "votes_counted_pct": 70, "category": "General", "gender": "Female",
@@ -1027,23 +1027,29 @@
             {"name": "Vikash Kumar", "party": "IND", "votes": 512, "pct": 35.3, "prev_votes": 480},
             {"name": "Asha Kumari", "party": "IND", "votes": 293, "pct": 20.2, "prev_votes": 260}
           ]},
-        {"ward_no": 21, "ward_name": "Ward 21", "status": "Counting", "winner": "", "winner_party": "", "winner_votes": 0, "vote_pct": 0, "margin": 0, "turnout": 47.0, "evm_processed": 65, "votes_counted_pct": 65, "category": "General", "gender": "Female",
+        {"ward_no": 21, "ward_name": "Ward 21", "status": "Declared", "winner": "Urmila Mandal", "winner_party": "IND", "winner_votes": 890, "vote_pct": 48.2, "margin": 123, "turnout": 47.0, "evm_processed": 100, "votes_counted_pct": 100, "category": "General", "gender": "Female",
           "candidates": [
             {"name": "Urmila Mandal", "party": "IND", "votes": 890, "pct": 48.2, "prev_votes": 780},
-            {"name": "Andila Devi", "party": "IND", "votes": 190, "pct": 10.3, "prev_votes": 650},
-            {"name": "Rajesh Kumar", "party": "IND", "votes": 767, "pct": 41.5, "prev_votes": 700}
+            {"name": "Rajesh Kumar", "party": "IND", "votes": 767, "pct": 41.5, "prev_votes": 700},
+            {"name": "Andila Devi", "party": "IND", "votes": 190, "pct": 10.3, "prev_votes": 650}
           ]},
-        {"ward_no": 26, "ward_name": "Ward 26", "status": "Declared", "winner": "Vikas Ranjan", "winner_party": "IND", "winner_votes": 856, "vote_pct": 47.5, "margin": 400, "turnout": 47.0, "evm_processed": 100, "votes_counted_pct": 100, "category": "General", "gender": "Male",
+        {"ward_no": 26, "ward_name": "Ward 26", "status": "Declared", "winner": "Pappu Singh", "winner_party": "IND", "winner_votes": 856, "vote_pct": 47.5, "margin": 400, "turnout": 47.0, "evm_processed": 100, "votes_counted_pct": 100, "category": "General", "gender": "Male",
           "candidates": [
-            {"name": "Vikas Ranjan", "party": "IND", "votes": 856, "pct": 47.5, "prev_votes": 750},
+            {"name": "Pappu Singh", "party": "IND", "votes": 856, "pct": 47.5, "prev_votes": 750},
             {"name": "Nirmal Mukherjee", "party": "IND", "votes": 456, "pct": 25.3, "prev_votes": 800},
             {"name": "Sanjay Prasad", "party": "IND", "votes": 489, "pct": 27.2, "prev_votes": 420}
           ]},
-        {"ward_no": 51, "ward_name": "Ward 51", "status": "Declared", "winner": "Birendra Kumar", "winner_party": "IND", "winner_votes": 734, "vote_pct": 46.8, "margin": 156, "turnout": 47.0, "evm_processed": 100, "votes_counted_pct": 100, "category": "General", "gender": "Male",
+        {"ward_no": 51, "ward_name": "Ward 51", "status": "Declared", "winner": "Virendra Kumar", "winner_party": "IND", "winner_votes": 734, "vote_pct": 46.8, "margin": 156, "turnout": 47.0, "evm_processed": 100, "votes_counted_pct": 100, "category": "General", "gender": "Male",
           "candidates": [
-            {"name": "Birendra Kumar", "party": "IND", "votes": 734, "pct": 46.8, "prev_votes": 650},
+            {"name": "Virendra Kumar", "party": "IND", "votes": 734, "pct": 46.8, "prev_votes": 650},
             {"name": "Suresh Yadav", "party": "IND", "votes": 578, "pct": 36.9, "prev_votes": 540},
             {"name": "Md Karim", "party": "IND", "votes": 256, "pct": 16.3, "prev_votes": 220}
+          ]},
+        {"ward_no": 36, "ward_name": "Ward 36 - Jharia", "status": "Declared", "winner": "Suman Agarwal", "winner_party": "IND", "winner_votes": 678, "vote_pct": 45.2, "margin": 134, "turnout": 48.5, "evm_processed": 100, "votes_counted_pct": 100, "category": "General", "gender": "Male",
+          "candidates": [
+            {"name": "Suman Agarwal", "party": "IND", "votes": 678, "pct": 45.2, "prev_votes": 600},
+            {"name": "Rajesh Kumar", "party": "IND", "votes": 544, "pct": 36.3, "prev_votes": 510},
+            {"name": "Md Imran", "party": "IND", "votes": 278, "pct": 18.5, "prev_votes": 240}
           ]}
       ]
     },
