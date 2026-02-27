@@ -2,10 +2,17 @@
   "election_name": "Jharkhand Urban Local Body Elections 2026",
   "last_updated": "2026-02-27T08:30:00",
   "summary": {
-    "total_ulbs": 22,
+    "total_ulbs": 48,
     "total_wards": 484,
     "declared": 163,
-    "turnout": 64.8
+    "turnout": 62.0,
+    "total_voters": 4300000,
+    "total_candidates": 6000,
+    "polling_booths": 4307,
+    "hyper_sensitive_booths": 896,
+    "sensitive_booths": 2445,
+    "mayor_chairperson_candidates": 562,
+    "women_mayor_candidates": 235
   },
   "parties": [
     {"name": "JMM", "full_name": "Jharkhand Mukti Morcha", "color": "#2E7D32", "seats_won": 38},
@@ -21,6 +28,7 @@
       "type": "Municipal Corporation",
       "total_wards": 53,
       "declared": 10,
+      "overall_turnout": 43.35,
       "mayor_race": {
         "status": "Counting",
         "leading": "Roshni Khalko",
@@ -841,7 +849,7 @@
     {
       "name": "Dhanbad Municipal Corporation",
       "type": "Municipal Corporation",
-      "total_wards": 51,
+      "total_wards": 55,
       "declared": 3,
       "mayor_race": {
         "status": "Counting",
