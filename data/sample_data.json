@@ -2,9 +2,9 @@
   "election_name": "Jharkhand Urban Local Body Elections 2026",
   "last_updated": "2026-02-27T13:00:00",
   "summary": {
-    "total_ulbs": 12,
-    "total_wards": 198,
-    "declared": 142,
+    "total_ulbs": 19,
+    "total_wards": 378,
+    "declared": 155,
     "turnout": 64.8
   },
   "parties": [
@@ -692,6 +692,12 @@
             {"name": "Rajesh Sharma", "party": "BJP", "votes": 578, "pct": 35.3, "prev_votes": 540},
             {"name": "Neelam Kumari", "party": "JMM", "votes": 302, "pct": 18.5, "prev_votes": 270}
           ]},
+        {"ward_no": 7, "ward_name": "Ward 7", "status": "Declared", "winner": "Nikhat Yasmin", "winner_party": "IND", "winner_votes": 745, "vote_pct": 46.5, "margin": 167, "turnout": 68.1, "evm_processed": 100, "votes_counted_pct": 100, "category": "General", "gender": "Female",
+          "candidates": [
+            {"name": "Nikhat Yasmin", "party": "IND", "votes": 745, "pct": 46.5, "prev_votes": 660},
+            {"name": "Rajesh Verma", "party": "BJP", "votes": 578, "pct": 36.1, "prev_votes": 540},
+            {"name": "Sunita Kumari", "party": "JMM", "votes": 279, "pct": 17.4, "prev_votes": 250}
+          ]},
         {"ward_no": 27, "ward_name": "Ward 27", "status": "Declared", "winner": "Soni Kshetri Krishna", "winner_party": "JMM", "winner_votes": 778, "vote_pct": 47.1, "margin": 189, "turnout": 69.5, "evm_processed": 100, "votes_counted_pct": 100, "category": "OBC", "gender": "Female",
           "candidates": [
             {"name": "Soni Kshetri Krishna", "party": "JMM", "votes": 778, "pct": 47.1, "prev_votes": 690},
@@ -699,6 +705,170 @@
             {"name": "Md Arif", "party": "IND", "votes": 284, "pct": 17.2, "prev_votes": 250}
           ]}
       ]
+    },
+    {
+      "name": "Garhwa Nagar Parishad",
+      "type": "Nagar Parishad",
+      "total_wards": 15,
+      "declared": 1,
+      "wards": [
+        {"ward_no": 6, "ward_name": "Ward 6", "status": "Declared", "winner": "Anita Devi", "winner_party": "IND", "winner_votes": 534, "vote_pct": 46.2, "margin": 112, "turnout": 64.8, "evm_processed": 100, "votes_counted_pct": 100, "category": "General", "gender": "Female",
+          "candidates": [
+            {"name": "Anita Devi", "party": "IND", "votes": 534, "pct": 46.2, "prev_votes": 470},
+            {"name": "Rajesh Yadav", "party": "BJP", "votes": 422, "pct": 36.5, "prev_votes": 400},
+            {"name": "Kavita Singh", "party": "JMM", "votes": 200, "pct": 17.3, "prev_votes": 180}
+          ]}
+      ]
+    },
+    {
+      "name": "Ramgarh Nagar Parishad",
+      "type": "Nagar Parishad",
+      "total_wards": 20,
+      "declared": 1,
+      "wards": [
+        {"ward_no": 13, "ward_name": "Ward 13", "status": "Declared", "winner": "Ranjeet Kumar Paswan", "winner_party": "IND", "winner_votes": 612, "vote_pct": 45.8, "margin": 134, "turnout": 66.3, "evm_processed": 100, "votes_counted_pct": 100, "category": "SC", "gender": "Male",
+          "candidates": [
+            {"name": "Ranjeet Kumar Paswan", "party": "IND", "votes": 612, "pct": 45.8, "prev_votes": 540},
+            {"name": "Suresh Mahato", "party": "BJP", "votes": 478, "pct": 35.8, "prev_votes": 450},
+            {"name": "Babita Devi", "party": "JMM", "votes": 246, "pct": 18.4, "prev_votes": 220}
+          ]}
+      ]
+    },
+    {
+      "name": "Sahibganj Nagar Parishad",
+      "type": "Nagar Parishad",
+      "total_wards": 18,
+      "declared": 0,
+      "wards": [
+        {"ward_no": 1, "ward_name": "Ward 1", "status": "Counting", "winner": "", "winner_party": "", "winner_votes": 0, "vote_pct": 0, "margin": 0, "turnout": 63.5, "evm_processed": 60, "votes_counted_pct": 60, "category": "OBC", "gender": "Male",
+          "candidates": [
+            {"name": "Rajkumar Mandal", "party": "IND", "votes": 456, "pct": 42.1, "prev_votes": 400},
+            {"name": "Sanjay Das", "party": "BJP", "votes": 389, "pct": 35.9, "prev_votes": 370},
+            {"name": "Md Imran", "party": "JMM", "votes": 238, "pct": 22.0, "prev_votes": 210}
+          ]},
+        {"ward_no": 2, "ward_name": "Ward 2", "status": "Counting", "winner": "", "winner_party": "", "winner_votes": 0, "vote_pct": 0, "margin": 0, "turnout": 64.2, "evm_processed": 55, "votes_counted_pct": 55, "category": "General", "gender": "Female",
+          "candidates": [
+            {"name": "Anita Bashak", "party": "IND", "votes": 478, "pct": 44.5, "prev_votes": 420},
+            {"name": "Purnima Devi", "party": "BJP", "votes": 378, "pct": 35.2, "prev_votes": 360},
+            {"name": "Sunita Roy", "party": "JMM", "votes": 218, "pct": 20.3, "prev_votes": 190}
+          ]},
+        {"ward_no": 3, "ward_name": "Ward 3", "status": "Counting", "winner": "", "winner_party": "", "winner_votes": 0, "vote_pct": 0, "margin": 0, "turnout": 65.1, "evm_processed": 58, "votes_counted_pct": 58, "category": "General", "gender": "Male",
+          "candidates": [
+            {"name": "Sunny Kumar Saha", "party": "IND", "votes": 501, "pct": 45.8, "prev_votes": 440},
+            {"name": "Rajesh Prasad", "party": "BJP", "votes": 389, "pct": 35.6, "prev_votes": 370},
+            {"name": "Md Firoz", "party": "JMM", "votes": 204, "pct": 18.6, "prev_votes": 180}
+          ]},
+        {"ward_no": 4, "ward_name": "Ward 4", "status": "Counting", "winner": "", "winner_party": "", "winner_votes": 0, "vote_pct": 0, "margin": 0, "turnout": 62.8, "evm_processed": 52, "votes_counted_pct": 52, "category": "General", "gender": "Female",
+          "candidates": [
+            {"name": "Soharphool Bibi", "party": "IND", "votes": 445, "pct": 43.2, "prev_votes": 390},
+            {"name": "Renu Kumari", "party": "BJP", "votes": 378, "pct": 36.7, "prev_votes": 360},
+            {"name": "Dilip Mandal", "party": "JMM", "votes": 207, "pct": 20.1, "prev_votes": 180}
+          ]},
+        {"ward_no": 6, "ward_name": "Ward 6", "status": "Counting", "winner": "", "winner_party": "", "winner_votes": 0, "vote_pct": 0, "margin": 0, "turnout": 64.5, "evm_processed": 50, "votes_counted_pct": 50, "category": "General", "gender": "Female",
+          "candidates": [
+            {"name": "Geeta Barman", "party": "IND", "votes": 467, "pct": 44.1, "prev_votes": 410},
+            {"name": "Sanjay Roy", "party": "BJP", "votes": 389, "pct": 36.7, "prev_votes": 370},
+            {"name": "Kabir Das", "party": "JMM", "votes": 203, "pct": 19.2, "prev_votes": 180}
+          ]},
+        {"ward_no": 7, "ward_name": "Ward 7", "status": "Counting", "winner": "", "winner_party": "", "winner_votes": 0, "vote_pct": 0, "margin": 0, "turnout": 63.9, "evm_processed": 48, "votes_counted_pct": 48, "category": "SC", "gender": "Male",
+          "candidates": [
+            {"name": "Ujjwal Kumar Halder", "party": "IND", "votes": 489, "pct": 45.2, "prev_votes": 430},
+            {"name": "Manoj Mahato", "party": "BJP", "votes": 378, "pct": 34.9, "prev_votes": 360},
+            {"name": "Sunita Devi", "party": "JMM", "votes": 215, "pct": 19.9, "prev_votes": 190}
+          ]}
+      ]
+    },
+    {
+      "name": "Jhumri Tilaiya Nagar Parishad",
+      "type": "Nagar Parishad",
+      "total_wards": 15,
+      "declared": 1,
+      "wards": [
+        {"ward_no": 1, "ward_name": "Ward 1", "status": "Declared", "winner": "Ranjeet Sao", "winner_party": "IND", "winner_votes": 567, "vote_pct": 47.2, "margin": 134, "turnout": 65.8, "evm_processed": 100, "votes_counted_pct": 100, "category": "General", "gender": "Male",
+          "candidates": [
+            {"name": "Ranjeet Sao", "party": "IND", "votes": 567, "pct": 47.2, "prev_votes": 500},
+            {"name": "Md Arif", "party": "JMM", "votes": 433, "pct": 36.1, "prev_votes": 400},
+            {"name": "Sunita Devi", "party": "IND", "votes": 201, "pct": 16.7, "prev_votes": 180}
+          ]}
+      ]
+    },
+    {
+      "name": "Dumka Nagar Parishad",
+      "type": "Nagar Parishad",
+      "total_wards": 23,
+      "declared": 1,
+      "wards": [
+        {"ward_no": 4, "ward_name": "Ward 4", "status": "Declared", "winner": "Sanjeev Yadav", "winner_party": "IND", "winner_votes": 623, "vote_pct": 46.8, "margin": 145, "turnout": 66.7, "evm_processed": 100, "votes_counted_pct": 100, "category": "OBC", "gender": "Male",
+          "candidates": [
+            {"name": "Sanjeev Yadav", "party": "IND", "votes": 623, "pct": 46.8, "prev_votes": 550},
+            {"name": "Rajesh Mandal", "party": "BJP", "votes": 478, "pct": 35.9, "prev_votes": 450},
+            {"name": "Sunita Murmu", "party": "JMM", "votes": 231, "pct": 17.3, "prev_votes": 200}
+          ]}
+      ]
+    },
+    {
+      "name": "Giridih Municipal Corporation",
+      "type": "Municipal Corporation",
+      "total_wards": 35,
+      "declared": 3,
+      "wards": [
+        {"ward_no": 1, "ward_name": "Ward 1", "status": "Declared", "winner": "Anil Ram", "winner_party": "IND", "winner_votes": 534, "vote_pct": 45.2, "margin": 85, "turnout": 64.5, "evm_processed": 100, "votes_counted_pct": 100, "category": "SC", "gender": "Male",
+          "candidates": [
+            {"name": "Anil Ram", "party": "IND", "votes": 534, "pct": 45.2, "prev_votes": 470},
+            {"name": "Rajesh Prasad", "party": "BJP", "votes": 449, "pct": 38.0, "prev_votes": 420},
+            {"name": "Sunita Devi", "party": "JMM", "votes": 198, "pct": 16.8, "prev_votes": 170}
+          ]},
+        {"ward_no": 2, "ward_name": "Ward 2", "status": "Declared", "winner": "Lalo Rain", "winner_party": "IND", "winner_votes": 512, "vote_pct": 44.8, "margin": 85, "turnout": 63.9, "evm_processed": 100, "votes_counted_pct": 100, "category": "General", "gender": "Female",
+          "candidates": [
+            {"name": "Lalo Rain", "party": "IND", "votes": 512, "pct": 44.8, "prev_votes": 450},
+            {"name": "Manoj Singh", "party": "BJP", "votes": 427, "pct": 37.3, "prev_votes": 400},
+            {"name": "Kavita Kumari", "party": "JMM", "votes": 205, "pct": 17.9, "prev_votes": 180}
+          ]},
+        {"ward_no": 3, "ward_name": "Ward 3", "status": "Counting", "winner": "", "winner_party": "", "winner_votes": 0, "vote_pct": 0, "margin": 0, "turnout": 65.2, "evm_processed": 70, "votes_counted_pct": 70, "category": "General", "gender": "Male",
+          "candidates": [
+            {"name": "Mukesh Saw", "party": "IND", "votes": 489, "pct": 43.5, "prev_votes": 430},
+            {"name": "Dilip Kumar", "party": "BJP", "votes": 399, "pct": 35.5, "prev_votes": 380},
+            {"name": "Asha Devi", "party": "JMM", "votes": 236, "pct": 21.0, "prev_votes": 210}
+          ]},
+        {"ward_no": 4, "ward_name": "Ward 4", "status": "Declared", "winner": "Krishna Saw", "winner_party": "IND", "winner_votes": 578, "vote_pct": 46.5, "margin": 125, "turnout": 66.8, "evm_processed": 100, "votes_counted_pct": 100, "category": "OBC", "gender": "Male",
+          "candidates": [
+            {"name": "Krishna Saw", "party": "IND", "votes": 578, "pct": 46.5, "prev_votes": 510},
+            {"name": "Suresh Yadav", "party": "BJP", "votes": 453, "pct": 36.4, "prev_votes": 430},
+            {"name": "Md Karim", "party": "JMM", "votes": 213, "pct": 17.1, "prev_votes": 190}
+          ]}
+      ]
+    },
+    {
+      "name": "Dhanbad Municipal Corporation",
+      "type": "Municipal Corporation",
+      "total_wards": 45,
+      "declared": 0,
+      "mayor_race": {
+        "status": "Counting",
+        "leading": "Sanjeev Agarwal",
+        "leading_party": "IND",
+        "margin": 0,
+        "trailing": "Chandrashekhar Agarwal",
+        "trailing_party": "IND",
+        "note": "Three-way contest: Sanjeev Agarwal (BJP-backed), Chandrashekhar Agarwal (JMM-backed), Shamsher Alam (INC-backed). Turnout: 46.98%"
+      },
+      "wards": []
+    },
+    {
+      "name": "Bokaro Chas Municipal Corporation",
+      "type": "Municipal Corporation",
+      "total_wards": 35,
+      "declared": 0,
+      "mayor_race": {
+        "status": "Counting",
+        "leading": "",
+        "leading_party": "",
+        "margin": 0,
+        "trailing": "",
+        "trailing_party": "",
+        "note": "31 candidates contesting for Mayor, 217 for ward councillor seats. Counting underway."
+      },
+      "wards": []
     }
   ]
 }
