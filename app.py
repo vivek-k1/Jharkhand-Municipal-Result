@@ -653,11 +653,15 @@ def page_analytics(data: dict, df: pd.DataFrame):
 # ---------------------------------------------------------------------------
 def render_sidebar():
     with st.sidebar:
-        st.image(
-            "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/"
-            "Emblem_of_India.svg/200px-Emblem_of_India.svg.png",
-            width=80,
-        )
+        logo_path = Path(__file__).parent / "jharkhand_map.png"
+        if logo_path.exists():
+            st.image(str(logo_path), width=120)
+        else:
+            st.image(
+                "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/"
+                "Emblem_of_India.svg/200px-Emblem_of_India.svg.png",
+                width=80,
+            )
         st.markdown("### Jharkhand State Election Commission")
         st.markdown("**Nikay Chunav 2026**")
         st.divider()
