@@ -223,6 +223,38 @@ def inject_css(dark_mode: bool):
             text-align: left;
             min-height: 80px;
         }}
+        /* ---------- Summary card buttons ---------- */
+        .stButton > button[key*="summary_card"] {{
+            background: {card_bg};
+            border: 1px solid {border_color};
+            border-radius: 10px;
+            padding: 1.2rem 1rem;
+            text-align: center;
+            box-shadow: 0 2px 8px rgba(0,0,0,.08);
+            transition: all .2s ease;
+            height: auto;
+            min-height: 100px;
+            white-space: pre-line;
+            line-height: 1.2;
+        }}
+        .stButton > button[key*="summary_card"]:hover {{
+            transform: translateY(-3px);
+            box-shadow: 0 4px 15px rgba(255,153,51,0.2);
+            background: {card_bg};
+            border-color: {SAFFRON};
+        }}
+        /* Style the first line (value) differently */
+        .stButton > button[key*="summary_card"] strong {{
+            font-size: 2rem;
+            font-weight: 800;
+            display: block;
+            margin-bottom: 0.3rem;
+        }}
+        /* Color coding for different summary cards */
+        .stButton > button[key="summary_card_0"] strong {{ color: {SAFFRON}; }}
+        .stButton > button[key="summary_card_1"] strong {{ color: {NAVY}; }}
+        .stButton > button[key="summary_card_2"] strong {{ color: {GREEN}; }}
+        .stButton > button[key="summary_card_3"] strong {{ color: #19AAED; }}
         /* Ward table tweaks */
         .ward-table {{ width: 100%; border-collapse: collapse; }}
         .ward-table th {{
@@ -321,7 +353,7 @@ def page_home(data: dict, df: pd.DataFrame):
         <p>Jharkhand Urban Local Body (Municipal) Election Results</p>
     </div>""", unsafe_allow_html=True)
 
-    # Summary cards
+    # Summary cards - now clickable
     cols = st.columns(4)
     cards = [
         ("Total ULBs", summary["total_ulbs"], SAFFRON),
@@ -329,8 +361,19 @@ def page_home(data: dict, df: pd.DataFrame):
         ("Results Declared", f"{len(df[df['Status']=='Declared'])}/{len(df)}", GREEN),
         ("Avg. Turnout", f"{df['Turnout %'].mean():.1f}%", "#19AAED"),
     ]
-    for col, (label, val, clr) in zip(cols, cards):
-        col.markdown(metric_card(label, val, clr), unsafe_allow_html=True)
+    
+    for i, (col, (label, val, clr)) in enumerate(zip(cols, cards)):
+        with col:
+            # Create clickable summary card
+            if st.button(
+                f"**{val}**\n\n{label}",
+                key=f"summary_card_{i}",
+                use_container_width=True,
+                help=f"Click to view detailed municipality results"
+            ):
+                # Redirect to Municipality-wise section
+                st.session_state.nav = "🏛️ Municipality-wise"
+                st.rerun()
 
     st.markdown("<br>", unsafe_allow_html=True)
 
@@ -790,7 +833,7 @@ def render_sidebar():
         st.divider()
 
         # Navigation with enhanced styling
-        st.markdown("### 📍 Navigation")
+        st.markdown("###")
         page = st.radio(
             "",
             ["🏠 Dashboard Home", "🏛️ Municipality-wise", "📈 State Analytics"],
