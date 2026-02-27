@@ -37,13 +37,12 @@ st.set_page_config(
 )
 
 # ---------------------------------------------------------------------------
-# Google AdSense verification
+# Google AdSense verification meta tag
 # ---------------------------------------------------------------------------
-ADSENSE_CODE = """
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9674118663923293"
-     crossorigin="anonymous"></script>
+ADSENSE_META = """
+<meta name="google-adsense-account" content="ca-pub-9674118663923293">
 """
-st.markdown(ADSENSE_CODE, unsafe_allow_html=True)
+st.markdown(ADSENSE_META, unsafe_allow_html=True)
 
 # ---------------------------------------------------------------------------
 # Theme colours (Jharkhand: saffron, green, blue)
