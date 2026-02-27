@@ -79,6 +79,7 @@ HTML_TEMPLATE = """<!DOCTYPE html>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google-adsense-account" content="ca-pub-9674118663923293">
     <title>Jharkhand Nikay Chunav Results 2026 – Live</title>
     <style>
         * {{ margin: 0; padding: 0; box-sizing: border-box; }}
