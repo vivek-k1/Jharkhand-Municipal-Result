@@ -799,23 +799,6 @@ def render_sidebar():
 
         st.divider()
 
-        # Quick stats in sidebar
-        st.markdown("### 📊 Quick Stats")
-        data = load_data()
-        total_munis = len(data["municipalities"])
-        total_wards = sum(len(m.get("wards", [])) for m in data["municipalities"])
-        declared_wards = sum(1 for m in data["municipalities"] for w in m.get("wards", []) if w["status"] == "Declared")
-        
-        col1, col2 = st.columns(2)
-        with col1:
-            st.metric("ULBs", total_munis, delta=None)
-            st.metric("Declared", declared_wards, delta=None)
-        with col2:
-            st.metric("Total Wards", total_wards, delta=None)
-            st.metric("Progress", f"{round(declared_wards/total_wards*100, 1)}%", delta=None)
-
-        st.divider()
-
         # Settings
         st.markdown("### ⚙️ Settings")
         dark_mode = st.toggle("🌙 Dark Mode", value=False, key="dark_mode")
