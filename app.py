@@ -24,6 +24,7 @@ import pandas as pd
 import plotly.express as px
 import plotly.graph_objects as go
 import streamlit as st
+import streamlit.components.v1 as components
 
 # ---------------------------------------------------------------------------
 # Page config – must be the first Streamlit command
@@ -34,6 +35,15 @@ st.set_page_config(
     layout="wide",
     initial_sidebar_state="expanded",
 )
+
+# ---------------------------------------------------------------------------
+# Google AdSense verification
+# ---------------------------------------------------------------------------
+ADSENSE_CODE = """
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9674118663923293"
+     crossorigin="anonymous"></script>
+"""
+st.markdown(ADSENSE_CODE, unsafe_allow_html=True)
 
 # ---------------------------------------------------------------------------
 # Theme colours (Jharkhand: saffron, green, blue)
