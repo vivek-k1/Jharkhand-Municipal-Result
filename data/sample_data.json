@@ -861,6 +861,72 @@
         "note": "Former MLA Sanjeev Singh leading by 2700 votes. Three-way contest with Chandrashekhar Agarwal (JMM-backed) and Shamsher Alam (INC-backed). Turnout: 46.98%"
       },
       "wards": [
+        {"ward_no": 1, "ward_name": "Ward 1", "status": "Counting", "winner": "", "winner_party": "", "winner_votes": 0, "vote_pct": 0, "margin": 0, "turnout": 47.0, "evm_processed": 70, "votes_counted_pct": 70, "category": "General", "gender": "Female",
+          "candidates": [
+            {"name": "Sajida Khatoon", "party": "IND", "votes": 678, "pct": 44.5, "prev_votes": 590},
+            {"name": "Sunita Devi", "party": "IND", "votes": 534, "pct": 35.0, "prev_votes": 500},
+            {"name": "Rajesh Kumar", "party": "IND", "votes": 312, "pct": 20.5, "prev_votes": 280}
+          ]},
+        {"ward_no": 2, "ward_name": "Ward 2", "status": "Counting", "winner": "", "winner_party": "", "winner_votes": 0, "vote_pct": 0, "margin": 0, "turnout": 47.0, "evm_processed": 68, "votes_counted_pct": 68, "category": "General", "gender": "Female",
+          "candidates": [
+            {"name": "Bharti Kumari", "party": "IND", "votes": 645, "pct": 43.8, "prev_votes": 570},
+            {"name": "Manoj Singh", "party": "IND", "votes": 523, "pct": 35.5, "prev_votes": 490},
+            {"name": "Kavita Devi", "party": "IND", "votes": 305, "pct": 20.7, "prev_votes": 270}
+          ]},
+        {"ward_no": 3, "ward_name": "Ward 3", "status": "Counting", "winner": "", "winner_party": "", "winner_votes": 0, "vote_pct": 0, "margin": 0, "turnout": 47.0, "evm_processed": 65, "votes_counted_pct": 65, "category": "General", "gender": "Male",
+          "candidates": [
+            {"name": "Kashi Shiv", "party": "IND", "votes": 612, "pct": 44.2, "prev_votes": 540},
+            {"name": "Suresh Yadav", "party": "IND", "votes": 489, "pct": 35.3, "prev_votes": 460},
+            {"name": "Md Alam", "party": "IND", "votes": 284, "pct": 20.5, "prev_votes": 250}
+          ]},
+        {"ward_no": 6, "ward_name": "Ward 6", "status": "Counting", "winner": "", "winner_party": "", "winner_votes": 0, "vote_pct": 0, "margin": 0, "turnout": 47.0, "evm_processed": 72, "votes_counted_pct": 72, "category": "General", "gender": "Male",
+          "candidates": [
+            {"name": "Md Kalam", "party": "IND", "votes": 690, "pct": 45.1, "prev_votes": 610},
+            {"name": "Rajesh Prasad", "party": "IND", "votes": 534, "pct": 34.9, "prev_votes": 500},
+            {"name": "Sunita Singh", "party": "IND", "votes": 306, "pct": 20.0, "prev_votes": 270}
+          ]},
+        {"ward_no": 8, "ward_name": "Ward 8", "status": "Counting", "winner": "", "winner_party": "", "winner_votes": 0, "vote_pct": 0, "margin": 0, "turnout": 47.0, "evm_processed": 66, "votes_counted_pct": 66, "category": "General", "gender": "Male",
+          "candidates": [
+            {"name": "Jiyauddin Sah", "party": "IND", "votes": 623, "pct": 43.5, "prev_votes": 550},
+            {"name": "Dilip Kumar", "party": "IND", "votes": 512, "pct": 35.8, "prev_votes": 480},
+            {"name": "Babita Devi", "party": "IND", "votes": 296, "pct": 20.7, "prev_votes": 260}
+          ]},
+        {"ward_no": 9, "ward_name": "Ward 9", "status": "Counting", "winner": "", "winner_party": "", "winner_votes": 0, "vote_pct": 0, "margin": 0, "turnout": 47.0, "evm_processed": 70, "votes_counted_pct": 70, "category": "General", "gender": "Female",
+          "candidates": [
+            {"name": "Pinki Devi", "party": "IND", "votes": 656, "pct": 44.8, "prev_votes": 580},
+            {"name": "Sanjay Yadav", "party": "IND", "votes": 512, "pct": 35.0, "prev_votes": 480},
+            {"name": "Md Firoz", "party": "IND", "votes": 296, "pct": 20.2, "prev_votes": 260}
+          ]},
+        {"ward_no": 12, "ward_name": "Ward 12", "status": "Counting", "winner": "", "winner_party": "", "winner_votes": 0, "vote_pct": 0, "margin": 0, "turnout": 47.0, "evm_processed": 68, "votes_counted_pct": 68, "category": "General", "gender": "Female",
+          "candidates": [
+            {"name": "Bulti Devi", "party": "IND", "votes": 634, "pct": 44.2, "prev_votes": 560},
+            {"name": "Rajesh Singh", "party": "IND", "votes": 512, "pct": 35.7, "prev_votes": 480},
+            {"name": "Kavita Kumari", "party": "IND", "votes": 288, "pct": 20.1, "prev_votes": 250}
+          ]},
+        {"ward_no": 13, "ward_name": "Ward 13", "status": "Counting", "winner": "", "winner_party": "", "winner_votes": 0, "vote_pct": 0, "margin": 0, "turnout": 47.0, "evm_processed": 65, "votes_counted_pct": 65, "category": "General", "gender": "Male",
+          "candidates": [
+            {"name": "Ajay Gupta", "party": "IND", "votes": 712, "pct": 46.2, "prev_votes": 630},
+            {"name": "Sunil Prasad", "party": "IND", "votes": 534, "pct": 34.7, "prev_votes": 500},
+            {"name": "Md Rashid", "party": "IND", "votes": 295, "pct": 19.1, "prev_votes": 260}
+          ]},
+        {"ward_no": 16, "ward_name": "Ward 16", "status": "Counting", "winner": "", "winner_party": "", "winner_votes": 0, "vote_pct": 0, "margin": 0, "turnout": 47.0, "evm_processed": 72, "votes_counted_pct": 72, "category": "OBC", "gender": "Male",
+          "candidates": [
+            {"name": "Vijay Yadav", "party": "IND", "votes": 678, "pct": 45.5, "prev_votes": 600},
+            {"name": "Manoj Kumar", "party": "IND", "votes": 523, "pct": 35.1, "prev_votes": 490},
+            {"name": "Sunita Devi", "party": "IND", "votes": 290, "pct": 19.4, "prev_votes": 250}
+          ]},
+        {"ward_no": 17, "ward_name": "Ward 17", "status": "Counting", "winner": "", "winner_party": "", "winner_votes": 0, "vote_pct": 0, "margin": 0, "turnout": 47.0, "evm_processed": 66, "votes_counted_pct": 66, "category": "SC", "gender": "Female",
+          "candidates": [
+            {"name": "Pratima Bauri", "party": "IND", "votes": 601, "pct": 43.8, "prev_votes": 530},
+            {"name": "Dilip Mandal", "party": "IND", "votes": 489, "pct": 35.6, "prev_votes": 460},
+            {"name": "Rajesh Das", "party": "IND", "votes": 282, "pct": 20.6, "prev_votes": 250}
+          ]},
+        {"ward_no": 18, "ward_name": "Ward 18", "status": "Counting", "winner": "", "winner_party": "", "winner_votes": 0, "vote_pct": 0, "margin": 0, "turnout": 47.0, "evm_processed": 70, "votes_counted_pct": 70, "category": "General", "gender": "Female",
+          "candidates": [
+            {"name": "Sarita Devi", "party": "IND", "votes": 645, "pct": 44.5, "prev_votes": 570},
+            {"name": "Vikash Kumar", "party": "IND", "votes": 512, "pct": 35.3, "prev_votes": 480},
+            {"name": "Asha Kumari", "party": "IND", "votes": 293, "pct": 20.2, "prev_votes": 260}
+          ]},
         {"ward_no": 21, "ward_name": "Ward 21", "status": "Counting", "winner": "", "winner_party": "", "winner_votes": 0, "vote_pct": 0, "margin": 0, "turnout": 47.0, "evm_processed": 65, "votes_counted_pct": 65, "category": "General", "gender": "Female",
           "candidates": [
             {"name": "Urmila Mandal", "party": "IND", "votes": 890, "pct": 48.2, "prev_votes": 780},
